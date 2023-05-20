@@ -4,7 +4,7 @@ resource "aws_security_group" "terraform_sg" {
   vpc_id      = aws_default_vpc.main.id
 
   ingress {
-    description      = "TLS from VPC"
+    description      = "Allow traffic"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
@@ -12,7 +12,7 @@ resource "aws_security_group" "terraform_sg" {
   }
 
   ingress {
-    description      = "TLS from VPC"
+    description      = "All traffic"
     from_port        = 80
     to_port          = 80
     protocol         = "tcp"
